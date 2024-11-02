@@ -1,0 +1,54 @@
+<div class="container">
+    <h2>
+        This is the list of Top African Music Artists
+    </h2>
+    
+    <form (ngSubmit)="saveArtist()" class="form-group mb-3">
+        <div class="row">
+            <div class="col-4">
+                <label for="name">Name</label>
+                <input [(ngModel)]="artist.name" class="form-control" type="text" name="name" />
+            </div>
+            <div class="col-4">
+                <label for="country">Country</label>
+                <input [(ngModel)]="artist.country" type="text" class="form-control" name="country">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <label for="grade">Grade</label>
+                <input [(ngModel)]="artist.grade" type="number" class="form-control" name="grade">
+            </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Save Artist</button>
+    </form>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Country</th>
+                <th>Grade</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngIf="artists?.length">
+                <tr *ngFor="let artist of artists">
+                    <td>{{ artist.name }}</td>
+                    <td>{{ artist.country }}</td>
+                    <td>{{ artist.grade }}</td>
+                    <td>
+                        <a class="btn btn-outline-danger" (click)="deleteArtist(artist.id)">Delete</a>
+                        <a class="btn btn-outline-info ml-3" (click)="updateArtist(artist)">Update</a>
+                    </td>
+                </tr>
+            </ng-container>
+            <ng-container *ngIf="!artists?.length">
+                <tr>
+                    No Artists Loaded!
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>

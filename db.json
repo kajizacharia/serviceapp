@@ -1,0 +1,46 @@
+{
+  "artists": [
+    {
+      "id": "2",
+      "grade": 2,
+      "name": "Burna Boy",
+      "country": "Nigeria"
+    },
+    {
+      "id": "3",
+      "grade": 3,
+      "name": "Diamondz Platinum",
+      "country": "Tanzania"
+    },
+    {
+      "id": "4",
+      "grade": 4,
+      "name": "Sarkodie",
+      "country": "Ghana"
+    },
+    {
+      "id": "5",
+      "grade": 5,
+      "name": "Mr. Eazi",
+      "country": "Nigeria"
+    },
+    {
+      "id": "6",
+      "grade": 6,
+      "name": "Ali Kiba",
+      "country": "Tanzania"
+    },
+    {
+      "id": 7,
+      "name": "Harmonize Jeshi",
+      "grade": 7,
+      "country": "Tanzania"
+    },
+    {
+      "id": 8,
+      "name": "Aslay",
+      "country": "Tanzania",
+      "grade": 7
+    }
+  ]
+}
